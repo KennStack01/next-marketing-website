@@ -1,11 +1,7 @@
 import Head from 'next/head'
 import { GraphQLClient } from 'graphql-request'
 
-const graphcms = new GraphQLClient(
-  'https://api-us-east-1.graphcms.com/v2/ckz83d4zr0vn701wb4gs04w0u/master'
-)
-
-// const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
+const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT)
 
 export default function Home({ greetingMessages }) {
   console.log(greetingMessages)
@@ -26,7 +22,7 @@ export default function Home({ greetingMessages }) {
         </h1>
 
         <div className="mx-auto flex flex-col">
-          {/* {greetingMessages?.map((content, index) => (
+          {greetingMessages?.map((content, index) => (
             <div key={index} className="my-10">
               <h1 className="text-xl font-bold"> {content.greatTitle} </h1>
               <p className="text-md my-5 text-justify font-medium">
@@ -34,7 +30,7 @@ export default function Home({ greetingMessages }) {
                 {content.productDescription}{' '}
               </p>
             </div>
-          ))} */}
+          ))}
         </div>
 
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full"></div>
