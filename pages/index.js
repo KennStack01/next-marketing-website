@@ -18,7 +18,7 @@ export default function Home({ productInfos, features }) {
 
       <Header />
       <div className="">
-        {productInfos.map((productInfo, index) => (
+        {productInfos?.map((productInfo, index) => (
           <div key={index} className="flex flex-col items-center ">
             <div className="absolute z-40 mx-4 mt-10 flex flex-col justify-items-center text-white md:mt-20">
               <h1 className="text-5xl font-bold md:my-8 md:text-8xl">
@@ -41,7 +41,7 @@ export default function Home({ productInfos, features }) {
       <main className="my-5 flex w-full flex-1 flex-col items-center justify-center text-center">
         {/* <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full"> */}
         <div className="md:grid md:grid-cols-2 ">
-          {features.map((feature, index) => (
+          {features?.map((feature, index) => (
             <div key={index} className="flex flex-col">
               <Feature
                 title={feature.title}
